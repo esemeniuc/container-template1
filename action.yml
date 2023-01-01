@@ -1,6 +1,6 @@
 name: 'Container Action Template'
 description: 'Get started with Container actions'
-author: 'GitHub'
+author: '0x'
 inputs: 
   myInput:
     description: 'Input to use'
