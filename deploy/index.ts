@@ -115,6 +115,8 @@ function deployDummyProgram(msPDA: PublicKey): PublicKey {
     console.log('Deployed demo, program id = ', dummyProgramKeypair.publicKey.toBase58());
     return dummyProgramKeypair.publicKey;
 }
+console.log('hi')
+console.log(process.env)
 
 //    https://devnet.squads.so/vault/assets/EdTg1h1qFKUwroqtrojn7gwmGUckpyvFgQ4WqEPPuc2n
 const msPDA = new PublicKey("EdTg1h1qFKUwroqtrojn7gwmGUckpyvFgQ4WqEPPuc2n");
