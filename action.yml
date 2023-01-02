@@ -2,9 +2,13 @@ name: 'squads-multisig-program-upgrade'
 description: 'Get started with Container actions'
 author: '0x'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  cluster:
+    description: 'Solana cluster to use. Eg. mainnet, testnet, devnet'
+    default: 'devnet'
+  keypair:
+    description: 'JSON string representation of your solana keypair. 
+    Eg. [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]'
+    default: '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]'
 runs:
   using: 'docker'
   image: 'Dockerfile'
