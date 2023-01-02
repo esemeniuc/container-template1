@@ -1,6 +1,6 @@
 FROM solanalabs/solana:beta
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
+RUN apt update && apt install -y curl && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
 
 COPY LICENSE README.md /
 
