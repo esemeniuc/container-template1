@@ -18,3 +18,5 @@ echo "$INPUT_KEYPAIR" > /deploy/id.json
 
 export ANCHOR_PROVIDER_URL=$INPUT_RPC_NODE
 export ANCHOR_WALLET=/deploy/id.json
+
+yarn start
