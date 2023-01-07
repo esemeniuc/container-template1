@@ -1,6 +1,6 @@
 FROM solanalabs/solana:beta
-COPY deploy .
 WORKDIR deploy
+COPY deploy /deploy
 
 RUN apt-get update && \
     apt-get install -y curl && \
