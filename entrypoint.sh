@@ -1,15 +1,15 @@
-#!/bin/sh -l
+#!/bin/bash
 set -xeo
-echo "hello $1"
-printenv
 set
 
-if [ -n "$INPUT_RPC_NODE" ]; then
+echo Running script
+
+if [ -z "$INPUT_RPC_NODE" ]; then
   echo Need RPC endpoint
   exit 1
 fi
 
-if [ -n "$INPUT_KEYPAIR_JSON" ]; then
+if [ -z "$INPUT_KEYPAIR_JSON" ]; then
   echo Need keypair
   exit 1
 fi
