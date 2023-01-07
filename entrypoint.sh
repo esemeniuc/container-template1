@@ -14,10 +14,10 @@ if [ -z "$INPUT_KEYPAIR_JSON" ]; then
 fi
 
 echo =========================== the keypair is "$INPUT_KEYPAIR_JSON"
-echo "$INPUT_KEYPAIR_JSON" > id.json
+echo "$INPUT_KEYPAIR_JSON" > /id.json
 
 export ANCHOR_PROVIDER_URL=$INPUT_RPC_NODE
-export ANCHOR_WALLET=id.json
+export ANCHOR_WALLET=/id.json
 
 #print all env vars
 set
