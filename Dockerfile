@@ -1,6 +1,7 @@
 FROM solanalabs/solana:beta
-WORKDIR deploy
-COPY deploy /deploy
+
+# copy to root directory, ie /
+COPY deploy .
 
 RUN apt-get update && \
     apt-get install -y curl && \
