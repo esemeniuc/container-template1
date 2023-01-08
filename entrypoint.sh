@@ -16,6 +16,7 @@ fi
 echo =========================== the keypair is "$INPUT_KEYPAIR_JSON"
 
 # default location that anchor reads from when in github actions environment
+mkdir -p /github/home/.config/solana
 echo "$INPUT_KEYPAIR_JSON" > /github/home/.config/solana/id.json
 
 export ANCHOR_PROVIDER_URL=$INPUT_RPC_NODE
