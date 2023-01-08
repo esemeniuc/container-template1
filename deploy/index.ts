@@ -3,7 +3,7 @@ import fs from "fs";
 import * as anchor from "@project-serum/anchor";
 
 import {execSync} from "child_process";
-import {PublicKey} from "@solana/web3.js";
+import {PublicKey,Keypair} from "@solana/web3.js";
 import Squads, {getAuthorityPDA, getIxPDA, getProgramManagerPDA,} from "@sqds/sdk";
 import BN from "bn.js";
 
@@ -118,11 +118,12 @@ function deployDummyProgram(msPDA: PublicKey): PublicKey {
 console.log('hi')
 console.log(process.env)
 
+Keypair.fromSecretKey([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] as any)
 //    https://devnet.squads.so/vault/assets/EdTg1h1qFKUwroqtrojn7gwmGUckpyvFgQ4WqEPPuc2n
-const msPDA = new PublicKey("EdTg1h1qFKUwroqtrojn7gwmGUckpyvFgQ4WqEPPuc2n");
-const testUpgradeName = "Upgrade #1 -dec25";
-const dummyProgramId = deployDummyProgram(msPDA);
-
-const newBinaryPath = `../target/deploy/gh_action_scrects.so`;
-
-upgradeContract(dummyProgramId, newBinaryPath, msPDA, testUpgradeName);
+// const msPDA = new PublicKey("EdTg1h1qFKUwroqtrojn7gwmGUckpyvFgQ4WqEPPuc2n");
+// const testUpgradeName = "Upgrade #1 -dec25";
+// const dummyProgramId = deployDummyProgram(msPDA);
+//
+// const newBinaryPath = `../target/deploy/gh_action_scrects.so`;
+//
+// upgradeContract(dummyProgramId, newBinaryPath, msPDA, testUpgradeName);

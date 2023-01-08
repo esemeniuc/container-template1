@@ -14,10 +14,12 @@ if [ -z "$INPUT_KEYPAIR_JSON" ]; then
 fi
 
 echo =========================== the keypair is "$INPUT_KEYPAIR_JSON"
-echo "$INPUT_KEYPAIR_JSON" > /id.json
+
+# default location that anchor reads from when in github actions environment
+echo "$INPUT_KEYPAIR_JSON" > /github/home/.config/solana/id.json
 
 export ANCHOR_PROVIDER_URL=$INPUT_RPC_NODE
-export ANCHOR_WALLET=/id.json
+export ANCHOR_WALLET=/github/home/.config/solana/id.json
 
 #print all env vars
 set
